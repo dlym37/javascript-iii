@@ -56,6 +56,20 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 
 // Code here
 
+function removeDuplicates (arr){
+  for(i=0; i < arr.length; i++){
+    for(j= i+1; j < arr.length; j++){
+      if(arr[i] === arr[j]){
+      arr.splice(i,1);
+      j= i+1;
+      
+      }
+    }
+  }
+  return arr;
+  
+}
+removeDuplicates(workplaceAccidents);
 
 
 
@@ -84,8 +98,11 @@ var cat = {
 
 // Code here
 
-var grumpyActivity;
-var fluffy2ndFriend;
+
+var grumpyActivity = cat.catFriends[0].activities[1];
+
+var fluffy2ndFriend = cat.catFriends[1].name;
+
 
 
 
